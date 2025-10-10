@@ -60,7 +60,6 @@ web3.eth.getCode("0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359", function(err,code
 ### Decompiling a contract
 
 #### Node.js
-
 ```javascript
 const { EVM } = require("evm");
 const Web3 = require('web3');
@@ -73,7 +72,6 @@ web3.eth.getCode("0x06012c8cf97BEaD5deAe237070F9587f8E7A266d").then(code => {  /
     console.log(evm.decompile());  /* Decompile bytecode */
 });
 ```
-
 #### Browser
 ```javascript
 const { EVM } = window.EVM;
@@ -90,7 +88,6 @@ web3.eth.getCode("0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359", function(err,code
 ### Extracting data from transaction
 
 #### Node.js
-
 ```javascript
 const { Transaction } = require("evm");
 const Web3 = require('web3');
@@ -102,7 +99,6 @@ web3.eth.getTransaction("0xd20a8d888a3f29471ea41ea77cc2d95ccd79ade1eaad059e83524
     console.log(transaction.getFunction());  /* Get function */
 });
 ```
-
 #### Browser
 ```javascript
 const { Transaction } = window.EVM;
