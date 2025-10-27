@@ -1,11 +1,3 @@
-# EVM Bytecode Decompiler
-[![](https://img.shields.io/travis/com/MrLuit/evm.svg?style=flat-square)](https://travis-ci.com/MrLuit/evm)
-[![](https://img.shields.io/npm/v/evm.svg?style=flat-square)](https://www.npmjs.com/package/evm)
-[![](https://img.shields.io/david/MrLuit/evm.svg?style=flat-square)](https://david-dm.org/MrLuit/evm)
-[![](https://img.shields.io/github/license/MrLuit/evm.svg?style=flat-square)](https://github.com/MrLuit/evm/blob/master/LICENSE)
-    
-An [Ethereum Virtual Machine (EVM)](https://medium.com/@jeff.ethereum/optimising-the-ethereum-virtual-machine-58457e61ca15) interpreter and decompiler, along with several other utils for programmatically extracting information from bytecode.
-
 ## Usage
 
 > npm i evm
@@ -60,7 +52,6 @@ web3.eth.getCode("0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359", function(err,code
 ### Decompiling a contract
 
 #### Node.js
-
 ```javascript
 const { EVM } = require("evm");
 const Web3 = require('web3');
@@ -73,7 +64,6 @@ web3.eth.getCode("0x06012c8cf97BEaD5deAe237070F9587f8E7A266d").then(code => {  /
     console.log(evm.decompile());  /* Decompile bytecode */
 });
 ```
-
 #### Browser
 ```javascript
 const { EVM } = window.EVM;
@@ -90,7 +80,6 @@ web3.eth.getCode("0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359", function(err,code
 ### Extracting data from transaction
 
 #### Node.js
-
 ```javascript
 const { Transaction } = require("evm");
 const Web3 = require('web3');
@@ -102,7 +91,6 @@ web3.eth.getTransaction("0xd20a8d888a3f29471ea41ea77cc2d95ccd79ade1eaad059e83524
     console.log(transaction.getFunction());  /* Get function */
 });
 ```
-
 #### Browser
 ```javascript
 const { Transaction } = window.EVM;
@@ -114,7 +102,4 @@ web3.eth.getTransaction("0xd20a8d888a3f29471ea41ea77cc2d95ccd79ade1eaad059e83524
     console.log(transaction.getFunction());  /* Get function */
 });
 ```
-
-
-
 `If you have any problem, feel free to reach out.`
